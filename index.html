@@ -1,15 +1,30 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Blackjack</title>
-    <link rel="stylesheet" type="text/css" href="/css/board.css"/>
-    <link rel="stylesheet" type="text/css" href="/css/images.css"/>
-    <script src="script.js"></script>
-</head>
-<body>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Stephen's Casino</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="css/board.css">
+    </head>
+    <body>
+            <h3>Stephen's Blackjack</h3>
+        <div class="board">
     
-</body>
+    <div class="game-body">
+           <div class="game-options">
+            <input type="button" id="btnStart" class="btn" value="New Game" onclick="startblackjack()">
+            <input type="button" class="btn" value="Hit me" onclick="hitMe()">
+            <input type="button" class="btn" value="Stand" onclick="stay()">
+            </div>
+                <div class="status" id="status"></div>   
+            <div id="deck" class="deck">
+            </div>   
+            <div id="players" class="players">
+            </div>
+            <div class="clear">
+    </div>
+        </div>
+        <script src=""></script>
+    </body>
 </html>

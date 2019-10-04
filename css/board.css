@@ -1,0 +1,104 @@
+.board {
+  width: auto;
+  border: solid 1px #ddd;
+  background: #039a37;
+  border: solid 10px burlywood;
+  text-align:center;
+  height: 520px;
+}
+.btn {
+  border:none;
+  cursor:pointer;
+  align-content: flex-start;
+  display: flex;
+  background:rgba(200, 200, 200, .5);
+  color:greenyellow;
+  border-radius:35px;
+  padding: 20px;
+  margin: 20px;
+  
+}
+.btn:focus {outline:0;}
+.board:focus {outline:0}
+.btn:hover {
+  background: white; 
+}
+h3 {
+  padding: 3px;
+  background: black;
+  color:white;
+  font-size: 26px;
+  border-radius: 60%;
+  text-align: center;
+}
+.board .game-body {
+padding: 15px;
+}
+.board .game-options {
+text-align:center;
+}
+.board .status {
+  display: inline-block;
+  background: rgb(255, 0, 13);
+  border: solid 5px white;
+  border-radius: 10px;
+  padding: 5px 20px;
+  margin: 0 auto;
+  margin-top: 10px;
+  display: none;
+}
+.players {
+  width: 500px;
+  margin: 0 auto;
+  margin-top: 20px;
+  text-align: center;
+}
+.player {
+  width: 40%;
+  border: solid 5px #f5f5f5;
+  border-radius: 10px;
+  padding: 10px;
+  display: inline-block;
+  margin:1%;
+  vertical-align: top;
+  background:#f5f5f5;
+}
+.player.active {
+  border: solid 10px red;
+}
+.points {
+  text-align: center;
+  font-size: 20pt;
+  font-weight: bold;
+  margin: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 
+
+.board .card {
+  width: 50px;
+  height: 80px;
+  padding: 10px;
+  border: solid 1px #808080;
+  background-color: white;
+  display: inline-block;
+  border-radius: 10px;
+  font-size: 10pt;
+  text-align: center;
+  margin: 3px;
+  border:solid 3px;
+} */
