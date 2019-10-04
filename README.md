@@ -2,7 +2,7 @@
             For project 1 I made a Blackjack game with just 1 person versus the dealer.
             ---------------Below are the rules of the game.---------------
 
-The player attempts to beat the dealer by getting a count as close to 21 as possible, without going over 21.
+The player's attempt to beat each other by getting a count as close to 21 as possible, without going over 21.
 
  At the start of the game, the dealer gives one card face up to the player and then onecard face up to themselves. Another round of cards is then dealt face up to the player, but the dealer takes the second card face down. 
 If the player's first two cards are an ace and a "ten-card" (a King Queen or Jack), giving a count of 21 in two cards, this is a natural or "blackjack." If the dealer has a natural, they automatically win the hand.
