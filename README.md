@@ -1,6 +1,6 @@
 # blackjack game-project 1
-For project 1 I made a Blackjack game with just 1 person versus the dealer. 
----------------Below are the rules of the game.---------------
+            For project 1 I made a Blackjack game with just 1 person versus the dealer.
+            ---------------Below are the rules of the game.---------------
 
 The player attempts to beat the dealer by getting a count as close to 21 as possible, without going over 21.
 
