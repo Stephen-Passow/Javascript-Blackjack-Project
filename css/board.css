@@ -5,6 +5,7 @@
   border: solid 10px burlywood;
   text-align:center;
   height: 520px;
+  border-radius: 20px;
 }
 .btn {
   border:none;
@@ -28,7 +29,7 @@ h3 {
   background: black;
   color:white;
   font-size: 26px;
-  border-radius: 60%;
+  border-radius: 50px;
   text-align: center;
 }
 .board .game-body {
