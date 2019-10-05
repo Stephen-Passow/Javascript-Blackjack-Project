@@ -1,4 +1,8 @@
-const deckArray = [
+
+let playerHand = [];
+let playerScore = 0;
+let dealerScore = 0;
+let deckArray = [
     {suit: 'hearts', value: 2 , face: 2 , image: '2_of_hearts.png'},
     {suit: 'hearts', value: 3 , face: 3, image: '3_of_hearts.png'},
     {suit: 'hearts', value: 4 , face: 4, image: '4_of_hearts.png'},
@@ -51,13 +55,30 @@ const deckArray = [
     {suit: 'diamonds', value: 10 , face: 'K', image: 'K_of_diamonds.png'},
     {suit: 'diamonds', value: 11 , face: 'A', image: 'A_of_diamonds.png'},
   ]
-    
-let deck = deckArray[Math.floor(Math.random()*deckArray.length)];
-console.log(deck)
+  
+  
 
+  //initizalize the game 
+function startGame(){
+  document.getElementById(startBtn)
+  for (i = 0; i < 2; i++) {
+    let deck = deckArray[Math.floor(Math.random()*deckArray.length)];
+   // console.log(deck);
+   playerHand.push(deck);
+   //console.log(deck);
+    }
+  }
+  console.log(playerHand)
+  startGame();
 
+  let playerHandTotal = '';
+  for (b = 0; b < playerHand.length; b++) {
+    playerHandTotal += (playerHand[b].value)
+  }
+  console.log(playerHandTotal);
+  
+  
 // function to keep track of player score
-
 
 // function to check to see if player score is over 21
 
