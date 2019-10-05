@@ -56,12 +56,6 @@ let deck = deckArray[Math.floor(Math.random()*deckArray.length)];
 console.log(deck)
 
 
-// function shuffleDeck() {
-//   for(i = 0; i < 52; i++) {
-//   }
-// }
-
-
 // function to keep track of player score
 
 
