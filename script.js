@@ -1,4 +1,3 @@
-
 let playerHand = [];
 let playerScore = 0;
 let dealerScore = 0;
@@ -63,27 +62,31 @@ function startGame(){
   document.getElementById(startBtn)
   for (i = 0; i < 2; i++) {
     let deck = deckArray[Math.floor(Math.random()*deckArray.length)];
-   // console.log(deck);
    playerHand.push(deck);
-   //console.log(deck);
     }
   }
-  console.log(playerHand)
   startGame();
 
+  //counting player hand total
   let playerHandTotal = '';
   for (b = 0; b < playerHand.length; b++) {
     playerHandTotal += (playerHand[b].value)
   }
-  console.log(playerHandTotal);
+  //-------------not working----------------
   
-  
-// function to keep track of player score
 
-// function to check to see if player score is over 21
 
-// function to split value of Ace to either 11 or 1
 
-//let dealer.value
-//  value < 18
-// dealer stays
+// deal 1 card when player "hits"
+function dealCard() {
+  for (x = 0; x < 0; x++)
+
+}
+
+
+
+  //player will "bust" if over 21
+  let playerBust = function () {
+    if (playerHandTotal >= 21);
+    return ('You Busted!')
+  }
