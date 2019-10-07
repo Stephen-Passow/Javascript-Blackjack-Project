@@ -1,7 +1,7 @@
 let playerScore = 0;
 let dealerScore = 0;
-let dealer=[];
-
+let dealerHand=[];
+let playerHand = []
 let deckArray = [
     {suit: 'hearts', value: 2 , face: 2 , image: '2_of_hearts.png'},
     {suit: 'hearts', value: 3 , face: 3, image: '3_of_hearts.png'},
@@ -72,12 +72,16 @@ let deckArray = [
 //   }
 //   startGame();
 
-  //counting player hand total
-  // let playerHandTotal = '';
-  // for (b = 0; b < playerHand.length; b++) {
-  //   playerHandTotal += (playerHand[b].value)
-  // }
-  //-------------not working----------------
+  // counting player hand total
+  let playerHandTotal = '';
+  for (b = 0; b < playerHand.length; b++) {
+    playerHandTotal += (playerHand[b].value)
+  }
+  // counting dealer hand total
+  let dealerHandTotal = '';
+  for (i = 0; i < dealerHand.length; i++) {
+    dealerHandtotal += (dealerHand[i].value)
+  }
 
 
 
@@ -94,27 +98,28 @@ let dealerBust = function () {
   return ('Dealer busted you win!')
 }
 
-
-let cardOne = deckArray[Math.floor(Math.random() * (52 - 0) + 0)].value;
-let cardTwo = deckArray[Math.floor(Math.random() * (52 - 0) + 0)].value;
-let cardThree = deckArray[Math.floor(Math.random() * (52 - 0) + 0)].value;
-let cardFour = deckArray[Math.floor(Math.random() * (52 - 0) + 0)].value;
-let cardFive = deckArray[Math.floor(Math.random() * (52 - 0) + 0)].value;
-console.log(cardOne + cardTwo + cardThree + cardFour)
-
-function takeAHit(card,player){
-  player.push(card);
+const getRandomCard = function() {
+  return deckArray[Math.floor(Math.random()*deckArray.length)];
+  console.log(getRandomCard)
 }
+
+
 function init() {
+  const cardOne = getRandomCard()
+  const cardTwo = getRandomCard()
+  const cardThree = getRandomCard()
+  const cardFour = getRandomCard()
   playerHand.push(cardOne);
   playerHand.push(cardTwo);
-  dealer.push(cardThree);
-  dealer.push(cardFour);
+  dealerHand.push(cardThree);
+  dealerHand.push(cardFour);
+}
+function init() {
+  document.getElementById('startBtn')
 }
 init();
 
 console.log(playerHand)
-console.log(dealer);
-takeAHit(deckArray[Math.floor(Math.random() * (52 - 0) + 0)].value, playerHand);
+console.log(dealerHand);
+//takeAHit(deckArray[Math.floor(Math.random() * (52 - 0) + 0)].value, playerHand);
 //console.log(playerHand)
-console.log(deckArray[Math.floor(Math.random() * (52 - 0) + 0)].value)

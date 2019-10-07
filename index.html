@@ -1,42 +1,37 @@
 <!DOCTYPE html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Stephen's Casino</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="css/board.css">
-    </head>
-    <body>
-            <h3>Stephen's Blackjack</h3>
-        <div class="board">
-                <div class="dealerHand">Dealer Hand</div>
-                <div class="playerHand">Player Hand</div>
-    <div class="game-body">
-           <div class="game-options">
-            <input type="button" id="startBtn" class="btn" value="New Game">
-            <input type="button" id="hitBtn" class="btn" value="Hit me">
-            <input type="button" id="stayBtn" class="btn" value="Stand">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Stephen's Casino</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/board.css">
+</head>
+
+<body>
+    <h3>Stephen's Blackjack</h3>
+    <div class="board">
+
+        <div id="game-controls">
+            <div class="game-options">
+                <input type="button" id="startBtn" class="btn" value="New Game">
+                <input type="button" id="hitBtn" class="btn" value="Hit me">
+                <input type="button" id="stayBtn" class="btn" value="Stand">
             </div>
-                <div class="status" id="status"></div>   
+            <div class="status" id="status"></div>
             <div id="deck" class="deck">
-            </div>   
+            </div>
             <div class="clear">
-    </div>
+            </div>
+
+        </div>
+        <div id="play-space">
+            <div id="dealerHand">Dealer</div>
+            <div id="playerHand">Player</div>
         </div>
 
-        
-
-    
-    <script>
-        //Player Hand
-       
-        //document.write(player)
-        //Dealer Hand 
-       
-        //document.write(dealer)
-    </script>
-     
         <script src="script.js"></script>
-    </body>
+</body>
+
 </html>

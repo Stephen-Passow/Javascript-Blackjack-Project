@@ -1,18 +1,13 @@
 * {
   margin: 0 auto,
 }
-.playerHand {
-  height: 200px;
-  border: black 10px solid;
-  margin-left: 20%;
-  display: flex;
 
-}
-.dealerHand {
-  height:  200px;
+#dealerHand, #playerHand {
+  height:  220px;
+  width: 650px;
   border: black 10px solid;
-  margin-left: 20%;
   display: flex;
+  margin: 25px 0 25px 0;
 }
 
 .board {
@@ -20,16 +15,16 @@
   border: solid 1px #ddd;
   background: #039a37;
   border: solid 10px burlywood;
-  text-align:center;
-  height: 520px;
+  height: 620px;
   border-radius: 20px;
+  display: flex;
 }
 .btn {
   border:none;
   cursor:pointer;
   align-content: flex-start;
   display: flex;
-  background:rgba(200, 200, 200, .5);
+  background:rgba(200, 200, 200, .4);
   color:greenyellow;
   border-radius:35px;
   padding: 20px;
@@ -73,9 +68,12 @@ text-align:center;
   font-weight: bold;
   margin: 10px;
 }
-.player {
-  border: 10px solid black;
+
+#game-controls { 
+  width: 220px;
+  height: 100%;
 }
-.dealer {
-  border: 10px solid black;
+
+.play-space {
+  flex: 1;
 }
