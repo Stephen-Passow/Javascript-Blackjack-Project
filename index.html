@@ -15,20 +15,34 @@
 
         <div id="game-controls">
             <div class="game-options">
-                <input type="button" id="startBtn" class="btn" value="New Game">
-                <input type="button" id="hitBtn" class="btn" value="Hit me">
-                <input type="button" id="stayBtn" class="btn" value="Stand">
+                <input type="button" id="start" class="btn" value="New Game">
+                <input type="button" id="hit" class="btn" value="Hit me">
+                <input type="button" id="stay" class="btn" value="Stand">
             </div>
-            <div class="status" id="status"></div>
-            <div id="deck" class="deck">
             </div>
             <div class="clear">
             </div>
-
         </div>
+
         <div id="play-space">
-            <div id="dealerHand">Dealer</div>
-            <div id="playerHand">Player</div>
+            <div id="dealerHand">Dealer
+                <div class="dealerCards">
+                    <div class="dealerCard">1</div>
+                    <div class="dealerCard">2</div>
+                    <div class="dealerCard">3</div>
+                    <div class="dealerCard">4</div>
+                    <div class="dealerCard">5</div>
+                </div>
+            </div>
+            <div id="playerHand">Player
+                <div class="playerCards">
+                    <div class="playerCard">1</div>
+                    <div class="playerCard">2</div>
+                    <div class="playerCard">3</div>
+                    <div class="playerCard">4</div>
+                    <div class="playerCard">5</div>
+                </div>
+            </div>
         </div>
 
         <script src="script.js"></script>
