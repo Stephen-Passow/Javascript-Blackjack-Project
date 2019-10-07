@@ -11,6 +11,7 @@ let deckArray = [
     {suit: 'hearts', value: 7 , face: 7, image: '7_of_hearts.png'},
     {suit: 'hearts', value: 8 , face: 8, image: '8_of_hearts.png'},
     {suit: 'hearts', value: 9 , face: 9, image: '9_of_hearts.png'},
+    {suit: 'hearts', value: 10 , face: 10, image: '10_of_hearts.png'},
     {suit: 'hearts', value: 10 , face: 'J', image: 'J_of_hearts.png'},
     {suit: 'hearts', value: 10 , face: 'Q', image: 'Q_of_hearts.png'},
     {suit: 'hearts', value: 10 , face: 'K', image: 'K_of_hearts.png'},
@@ -24,6 +25,7 @@ let deckArray = [
     {suit: 'spades', value: 7 , face: 7, image: '7_of_spades.png'},
     {suit: 'spades', value: 8 , face: 8, image: '8_of_spades.png'},
     {suit: 'spades', value: 9 , face: 9, image: '9_of_spades.png'},
+    {suit: 'spades', value: 10 , face: 10, image: '10_of_spades.png'},
     {suit: 'spades', value: 10 , face: 'J', image: 'J_of_spades.png'},
     {suit: 'spades', value: 10 , face: 'Q', image: 'Q_of_spades.png'},
     {suit: 'spades', value: 10 , face: 'K', image: 'K_of_spades.png'},
@@ -37,6 +39,7 @@ let deckArray = [
     {suit: 'clubs', value: 7 , face: 7, image: '7_of_clubs.png'},
     {suit: 'clubs', value: 8 , face: 8, image: '8_of_clubs.png'},
     {suit: 'clubs', value: 9 , face: 9, image: '9_of_clubs.png'},
+    {suit: 'clubs', value: 10 , face: 10, image: '10_of_clubs.png'},
     {suit: 'clubs', value: 10 , face: 'J', image: 'J_of_clubs.png'},
     {suit: 'clubs', value: 10 , face: 'Q', image: 'Q_of_clubs.png'},
     {suit: 'clubs', value: 10 , face: 'K', image: 'K_of_clubs.png'},
@@ -50,6 +53,7 @@ let deckArray = [
     {suit: 'diamonds', value: 7 , face: 7, image: '7_of_diamonds.png'},
     {suit: 'diamonds', value: 8 , face: 8, image: '8_of_diamonds.png'},
     {suit: 'diamonds', value: 9 , face: 9, image: '9_of_diamonds.png'},
+    {suit: 'diamonds', value: 10 , face: 10, image: '10_of_diamonds.png'},
     {suit: 'diamonds', value: 10 , face: 'J', image: 'J_of_diamonds.png'},
     {suit: 'diamonds', value: 10 , face: 'Q', image: 'Q_of_diamonds.png'},
     {suit: 'diamonds', value: 10 , face: 'K', image: 'K_of_diamonds.png'},
@@ -91,11 +95,13 @@ let dealerBust = function () {
 }
 
 
-let cardOne = deckArray[Math.floor(Math.random() * (48 - 0) + 0)].value;
-let cardTwo = deckArray[Math.floor(Math.random() * (48 - 0) + 0)].value;
-let cardThree = deckArray[Math.floor(Math.random() * (48 - 0) + 0)].value;
-let cardFour = deckArray[Math.floor(Math.random() * (48 - 0) + 0)].value;
-console.log(cardOne + cardTwo)
+let cardOne = deckArray[Math.floor(Math.random() * (52 - 0) + 0)].value;
+let cardTwo = deckArray[Math.floor(Math.random() * (52 - 0) + 0)].value;
+let cardThree = deckArray[Math.floor(Math.random() * (52 - 0) + 0)].value;
+let cardFour = deckArray[Math.floor(Math.random() * (52 - 0) + 0)].value;
+let cardFive = deckArray[Math.floor(Math.random() * (52 - 0) + 0)].value;
+console.log(cardOne + cardTwo + cardThree + cardFour)
+
 function takeAHit(card,player){
   player.push(card);
 }
@@ -107,8 +113,8 @@ function init() {
 }
 init();
 
-//console.log(playerHand)
+console.log(playerHand)
 console.log(dealer);
-takeAHit(deckArray[Math.floor(Math.random() * (48 - 0) + 0)].value, playerHand);
+takeAHit(deckArray[Math.floor(Math.random() * (52 - 0) + 0)].value, playerHand);
 //console.log(playerHand)
-console.log(deckArray[Math.floor(Math.random() * (48 - 0) + 0)].value)
+console.log(deckArray[Math.floor(Math.random() * (52 - 0) + 0)].value)
