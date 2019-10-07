@@ -1,6 +1,7 @@
-let playerHand = [];
 let playerScore = 0;
 let dealerScore = 0;
+let dealer=[];
+
 let deckArray = [
     {suit: 'hearts', value: 2 , face: 2 , image: '2_of_hearts.png'},
     {suit: 'hearts', value: 3 , face: 3, image: '3_of_hearts.png'},
@@ -58,35 +59,56 @@ let deckArray = [
   
 
   //initizalize the game 
-function startGame(){
-  document.getElementById(startBtn)
-  for (i = 0; i < 2; i++) {
-    let deck = deckArray[Math.floor(Math.random()*deckArray.length)];
-   playerHand.push(deck);
-    }
-  }
-  startGame();
+// function startGame(){
+//   document.getElementById(startBtn)
+//   for (i = 0; i < 2; i++) {
+//     let deck = deckArray[Math.floor(Math.random()*deckArray.length)];
+//    playerHand.push(deck);
+//     }
+//   }
+//   startGame();
 
   //counting player hand total
-  let playerHandTotal = '';
-  for (b = 0; b < playerHand.length; b++) {
-    playerHandTotal += (playerHand[b].value)
-  }
+  // let playerHandTotal = '';
+  // for (b = 0; b < playerHand.length; b++) {
+  //   playerHandTotal += (playerHand[b].value)
+  // }
   //-------------not working----------------
-  
 
 
 
-// deal 1 card when player "hits"
-function dealCard() {
-  for (x = 0; x < 0; x++)
+  //---player will "bust" if over 21
+  // let playerBust = function () {
+  //   if (playerHandTotal >= 21);
+  //   return ('You Busted!')
+  // }
+  // playerBust();
 
+  //---dealer bust function
+let dealerBust = function () {
+  if (dealer >= 21);
+  return ('Dealer busted you win!')
 }
 
 
+let cardOne = deckArray[Math.floor(Math.random() * (48 - 0) + 0)].value;
+let cardTwo = deckArray[Math.floor(Math.random() * (48 - 0) + 0)].value;
+let cardThree = deckArray[Math.floor(Math.random() * (48 - 0) + 0)].value;
+let cardFour = deckArray[Math.floor(Math.random() * (48 - 0) + 0)].value;
+console.log(cardOne + cardTwo)
+function takeAHit(card,player){
+  player.push(card);
+}
+function init() {
+  playerHand.push(cardOne);
+  playerHand.push(cardTwo);
+  dealer.push(cardThree);
+  dealer.push(cardFour);
+}
+init();
 
-  //player will "bust" if over 21
-  let playerBust = function () {
-    if (playerHandTotal >= 21);
-    return ('You Busted!')
-  }
+//console.log(playerHand)
+console.log(dealer);
+takeAHit(deckArray[Math.floor(Math.random() * (48 - 0) + 0)].value, playerHand);
+//console.log(playerHand)
+console.log(deckArray[Math.floor(Math.random() * (48 - 0) + 0)].value)
