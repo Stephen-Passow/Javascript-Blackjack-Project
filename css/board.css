@@ -14,8 +14,6 @@
 .playerCards, .dealerCards {
   display: flex;
   align-items: center;
-  align-content: space-evenly;
-  justify-content: space-between;
   flex: 1;
 }
 .board {
@@ -86,7 +84,7 @@ text-align:center;
 #play-space {
 flex: 1;
 }
-.playerCard {
+/* .playerCard {
   height: 150px;
   width: 100px;
   background: grey;
@@ -95,7 +93,7 @@ flex: 1;
   height: 150px;
   width: 100px;
   background: grey;
-}
+} */
 
 #playerScore {
   height: 75px;
@@ -114,4 +112,8 @@ flex: 1;
   font: 30px bold;
   font-family: Georgia, 'Times New Roman', Times, serif;
   font-style: oblique;
+}
+.card {
+  height: 100px;
+  margin: 0 20px;
 }

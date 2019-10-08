@@ -4,66 +4,78 @@ let dealerHand = [];
 let playerHand = [];
 
 let deckArray = [
-  { suit: "hearts", value: 2, face: 2, image: "2_of_hearts.png" },
-  { suit: "hearts", value: 3, face: 3, image: "3_of_hearts.png" },
-  { suit: "hearts", value: 4, face: 4, image: "4_of_hearts.png" },
-  { suit: "hearts", value: 5, face: 5, image: "5_of_hearts.png" },
-  { suit: "hearts", value: 6, face: 6, image: "6_of_hearts.png" },
-  { suit: "hearts", value: 7, face: 7, image: "7_of_hearts.png" },
-  { suit: "hearts", value: 8, face: 8, image: "8_of_hearts.png" },
-  { suit: "hearts", value: 9, face: 9, image: "9_of_hearts.png" },
-  { suit: "hearts", value: 10, face: 10, image: "10_of_hearts.png" },
-  { suit: "hearts", value: 10, face: "J", image: "J_of_hearts.png" },
-  { suit: "hearts", value: 10, face: "Q", image: "Q_of_hearts.png" },
-  { suit: "hearts", value: 10, face: "K", image: "K_of_hearts.png" },
-  { suit: "hearts", value: 11, face: "A", image: "A_of_hearts.png" },
+  { suit: "hearts", value: 2, face: 2, image: "css/images/2_of_hearts.png" },
+  { suit: "hearts", value: 3, face: 3, image: "css/images/3_of_hearts.png" },
+  { suit: "hearts", value: 4, face: 4, image: "css/images/4_of_hearts.png" },
+  { suit: "hearts", value: 5, face: 5, image: "css/images/5_of_hearts.png" },
+  { suit: "hearts", value: 6, face: 6, image: "css/images/6_of_hearts.png" },
+  { suit: "hearts", value: 7, face: 7, image: "css/images/7_of_hearts.png" },
+  { suit: "hearts", value: 8, face: 8, image: "css/images/8_of_hearts.png" },
+  { suit: "hearts", value: 9, face: 9, image: "css/images/9_of_hearts.png" },
+  { suit: "hearts", value: 10, face: 10, image: "css/images/10_of_hearts.png" },
+  { suit: "hearts", value: 10, face: "J", image: "css/images/Jack_of_hearts.png" },
+  { suit: "hearts", value: 10, face: "Q", image: "css/images/Queen_of_hearts.png" },
+  { suit: "hearts", value: 10, face: "K", image: "css/images/King_of_hearts.png" },
+  { suit: "hearts", value: 11, face: "A", image: "css/images/Ace_of_hearts.png" },
 
-  { suit: "spades", value: 2, face: 2, image: "2_of_spades.png" },
-  { suit: "spades", value: 3, face: 3, image: "3_of_spades.png" },
-  { suit: "spades", value: 4, face: 4, image: "4_of_spades.png" },
-  { suit: "spades", value: 5, face: 5, image: "5_of_spades.png" },
-  { suit: "spades", value: 6, face: 6, image: "6_of_spades.png" },
-  { suit: "spades", value: 7, face: 7, image: "7_of_spades.png" },
-  { suit: "spades", value: 8, face: 8, image: "8_of_spades.png" },
-  { suit: "spades", value: 9, face: 9, image: "9_of_spades.png" },
-  { suit: "spades", value: 10, face: 10, image: "10_of_spades.png" },
-  { suit: "spades", value: 10, face: "J", image: "J_of_spades.png" },
-  { suit: "spades", value: 10, face: "Q", image: "Q_of_spades.png" },
-  { suit: "spades", value: 10, face: "K", image: "K_of_spades.png" },
-  { suit: "spades", value: 11, face: "A", image: "A_of_spades.png" },
+  { suit: "spades", value: 2, face: 2, image: "css/images/2_of_spades.png" },
+  { suit: "spades", value: 3, face: 3, image: "css/images/3_of_spades.png" },
+  { suit: "spades", value: 4, face: 4, image: "css/images/4_of_spades.png" },
+  { suit: "spades", value: 5, face: 5, image: "css/images/5_of_spades.png" },
+  { suit: "spades", value: 6, face: 6, image: "css/images/6_of_spades.png" },
+  { suit: "spades", value: 7, face: 7, image: "css/images/7_of_spades.png" },
+  { suit: "spades", value: 8, face: 8, image: "css/images/8_of_spades.png" },
+  { suit: "spades", value: 9, face: 9, image: "css/images/9_of_spades.png" },
+  { suit: "spades", value: 10, face: 10, image: "css/images/10_of_spades.png" },
+  { suit: "spades", value: 10, face: "J", image: "css/images/Jack_of_spades.png" },
+  { suit: "spades", value: 10, face: "Q", image: "css/images/Queen_of_spades.png" },
+  { suit: "spades", value: 10, face: "K", image: "css/images/King_of_spades.png" },
+  { suit: "spades", value: 11, face: "A", image: "css/images/Ace_of_spades.png" },
 
-  { suit: "clubs", value: 2, face: 2, image: "2_of_clubs.png" },
-  { suit: "clubs", value: 3, face: 3, image: "3_of_clubs.png" },
-  { suit: "clubs", value: 4, face: 4, image: "4_of_clubs.png" },
-  { suit: "clubs", value: 5, face: 5, image: "5_of_clubs.png" },
-  { suit: "clubs", value: 6, face: 6, image: "6_of_clubs.png" },
-  { suit: "clubs", value: 7, face: 7, image: "7_of_clubs.png" },
-  { suit: "clubs", value: 8, face: 8, image: "8_of_clubs.png" },
-  { suit: "clubs", value: 9, face: 9, image: "9_of_clubs.png" },
-  { suit: "clubs", value: 10, face: 10, image: "10_of_clubs.png" },
-  { suit: "clubs", value: 10, face: "J", image: "J_of_clubs.png" },
-  { suit: "clubs", value: 10, face: "Q", image: "Q_of_clubs.png" },
-  { suit: "clubs", value: 10, face: "K", image: "K_of_clubs.png" },
-  { suit: "clubs", value: 11, face: "A", image: "A_of_clubs.png" },
+  { suit: "clubs", value: 2, face: 2, image: "css/images/2_of_clubs.png" },
+  { suit: "clubs", value: 3, face: 3, image: "css/images/3_of_clubs.png" },
+  { suit: "clubs", value: 4, face: 4, image: "css/images/4_of_clubs.png" },
+  { suit: "clubs", value: 5, face: 5, image: "css/images/5_of_clubs.png" },
+  { suit: "clubs", value: 6, face: 6, image: "css/images/6_of_clubs.png" },
+  { suit: "clubs", value: 7, face: 7, image: "css/images/7_of_clubs.png" },
+  { suit: "clubs", value: 8, face: 8, image: "css/images/8_of_clubs.png" },
+  { suit: "clubs", value: 9, face: 9, image: "css/images/9_of_clubs.png" },
+  { suit: "clubs", value: 10, face: 10, image: "css/images/10_of_clubs.png" },
+  { suit: "clubs", value: 10, face: "J", image: "css/images/Jack_of_clubs.png" },
+  { suit: "clubs", value: 10, face: "Q", image: "css/images/Queen_of_clubs.png" },
+  { suit: "clubs", value: 10, face: "K", image: "css/images/King_of_clubs.png" },
+  { suit: "clubs", value: 11, face: "A", image: "css/images/Ace_of_clubs.png" },
 
-  { suit: "diamonds", value: 2, face: 2, image: "2_of_diamonds.png" },
-  { suit: "diamonds", value: 3, face: 3, image: "3_of_diamonds.png" },
-  { suit: "diamonds", value: 4, face: 4, image: "4_of_diamonds.png" },
-  { suit: "diamonds", value: 5, face: 5, image: "5_of_diamonds.png" },
-  { suit: "diamonds", value: 6, face: 6, image: "6_of_diamonds.png" },
-  { suit: "diamonds", value: 7, face: 7, image: "7_of_diamonds.png" },
-  { suit: "diamonds", value: 8, face: 8, image: "8_of_diamonds.png" },
-  { suit: "diamonds", value: 9, face: 9, image: "9_of_diamonds.png" },
-  { suit: "diamonds", value: 10, face: 10, image: "10_of_diamonds.png" },
-  { suit: "diamonds", value: 10, face: "J", image: "J_of_diamonds.png" },
-  { suit: "diamonds", value: 10, face: "Q", image: "Q_of_diamonds.png" },
-  { suit: "diamonds", value: 10, face: "K", image: "K_of_diamonds.png" },
-  { suit: "diamonds", value: 11, face: "A", image: "A_of_diamonds.png" }
+  { suit: "diamonds", value: 2, face: 2, image: "css/images/2_of_diamonds.png" },
+  { suit: "diamonds", value: 3, face: 3, image: "css/images/3_of_diamonds.png" },
+  { suit: "diamonds", value: 4, face: 4, image: "css/images/4_of_diamonds.png" },
+  { suit: "diamonds", value: 5, face: 5, image: "css/images/5_of_diamonds.png" },
+  { suit: "diamonds", value: 6, face: 6, image: "css/images/6_of_diamonds.png" },
+  { suit: "diamonds", value: 7, face: 7, image: "css/images/7_of_diamonds.png" },
+  { suit: "diamonds", value: 8, face: 8, image: "css/images/8_of_diamonds.png" },
+  { suit: "diamonds", value: 9, face: 9, image: "css/images/9_of_diamonds.png" },
+  { suit: "diamonds", value: 10, face: 10, image: "css/images/10_of_diamonds.png" },
+  { suit: "diamonds", value: 10, face: "J", image: "css/images/Jack_of_diamonds.png" },
+  { suit: "diamonds", value: 10, face: "Q", image: "css/images/Queen_of_diamonds.png" },
+  { suit: "diamonds", value: 10, face: "K", image: "css/images/King_of_diamonds.png" },
+  { suit: "diamonds", value: 11, face: "A", image: "css/images/Ace_of_diamonds.png" }
 ];
 //function to get a random card off the deck
 const getRandomCard = function () {
-  return deckArray[Math.floor(Math.random() * deckArray.length)];
+  return deckArray[Math.floor(Math.random() * deckArray.length)]
 };
+// assigning
+let dealerCards = document.getElementsByClassName("dealerCards")[0];
+let playerCards = document.getElementsByClassName("playerCards")[0];
+
+
+// function cardImage () {
+// let card = getRandomCard();
+// let cardImg = document.createElement("img");
+// cardImg.setAttribute("src", card.image);
+// cardImg.className = "card";
+// playerCards.appendChild(cardImg);
+// }
 
 //---check player score---------------
 const checkPlayerHand = () => {
@@ -72,7 +84,6 @@ const checkPlayerHand = () => {
     total += playerHand[i].value;
   }
   playerHandTotal = total;
-  console.log("playerHandTotal", total);
   //send player score to populate screen
   document.getElementById("playerScore").innerHTML = total;
 };
@@ -85,23 +96,29 @@ const checkDealerHand = () => {
     total += dealerHand[i].value;
   }
   dealerHandTotal = total;
-  console.log("checkDealerHand - dealerHandTotal", total);
 };
 
 //hit the player with 1 card
 const hitPlayer = () => {
-  const hit = getRandomCard();
-  playerHand.push(hit);
-  console.log("playerHand", playerHand);
+  let card = getRandomCard();
+  let cardImg = document.createElement("img");
+  cardImg.setAttribute("src", card.image);
+  cardImg.className = "card";
+  playerCards.appendChild(cardImg);
+  playerHand.push(card);
   checkPlayerHand();
   if (playerHandTotal > 21)
     endGame();
 };
 //hit the dealer with 1 card
 const hitDealer = () => {
+  let card = getRandomCard();
+  let cardImg = document.createElement("img");
+  cardImg.setAttribute("src", card.image);
+  cardImg.className = "card";
+  dealerCards.appendChild(cardImg);
   const hit = getRandomCard();
   dealerHand.push(hit);
-  console.log("dealerHand", dealerHand);
   checkDealerHand();
 
 };
@@ -110,11 +127,11 @@ const stand = () => {
   for (i = 0; i < dealerHand.length; i++) {
     if (dealerHandTotal <= 17) {
       hitDealer();
-      console.log(dealerHandTotal);
     }
     else if (dealerHandTotal > 17) {
       return endGame();
     }
+    console.log('dealerHandTotal', dealerHandTotal[i]);
   }
 };
 
@@ -166,16 +183,18 @@ const startGame = () => {
   document.getElementById("notifications").innerHTML = ""
   dealerHandTotal = 0;
   playerHandTotal = 0;
+  for (i = 0; i < playerHand.length; i++) {
+    playerCards.removeChild(playerCards.lastChild)
+  }
+for (i = 0; i < dealerHand.length; i++) {
+  dealerCards.removeChild(dealerCards.lastChild)
+}
   dealerHand = [];
   playerHand = [];
-  const cardOne = getRandomCard();
-  const cardTwo = getRandomCard();
-  const cardThree = getRandomCard();
-  const cardFour = getRandomCard();
-  playerHand.push(cardOne);
-  playerHand.push(cardTwo);
-  dealerHand.push(cardThree);
-  dealerHand.push(cardFour);
+  hitPlayer();
+  hitPlayer();
+  hitDealer();
+  hitDealer();
   checkPlayerHand();
   checkDealerHand();
 };
