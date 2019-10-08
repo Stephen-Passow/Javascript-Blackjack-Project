@@ -73,6 +73,8 @@ const checkPlayerHand = () => {
   }
   playerHandTotal = total;
   console.log("playerHandTotal", total);
+  //send player score to populate screen
+  document.getElementById("playerScore").innerHTML = total;
 };
 
 //---check dealer score -----------------
@@ -93,7 +95,7 @@ const hitPlayer = () => {
   console.log("playerHand", playerHand);
   checkPlayerHand();
   if (playerHandTotal > 21)
-  endGame();
+    endGame();
 };
 //hit the dealer with 1 card
 const hitDealer = () => {
@@ -105,12 +107,12 @@ const hitDealer = () => {
 };
 //stand function that will let dealer play then decide winner
 const stand = () => {
-  for (i = 0; i < dealerHand.length; i++){
+  for (i = 0; i < dealerHand.length; i++) {
     if (dealerHandTotal <= 17) {
       hitDealer();
       console.log(dealerHandTotal);
     }
-    else if(dealerHandTotal > 17) {
+    else if (dealerHandTotal > 17) {
       return endGame();
     }
   }
@@ -119,7 +121,7 @@ const stand = () => {
 //function to end the game and send a message based on win condition of player or dealer
 function endGame() {
   if (playerHandTotal === 21) {
-    document.getElementById("notifications").innerHTML = "You win! You got blackjack. Click New Game to play again";
+    document.getElementById("notifications").innerHTML = "Blackjack! You win! Click New Game to play again";
     resetGame();
   }
   if (playerHandTotal > 21) {
@@ -144,7 +146,7 @@ function endGame() {
   }
   if (dealerHandTotal >= 17 && playerHandTotal === dealerHandTotal && dealerHandTotal < 21)
     document.getElementById("notifications").innerHTML = "You tied! Click New Game to play again";
-    resetGame();
+  resetGame();
 }
 //function to reset the board
 function resetGame() {
@@ -156,6 +158,8 @@ function resetGame() {
   // document.getElementById("stay").disabled = true;
   document.getElementById("start").disabled = false;
 }
+//send player score to populate screen
+document.getElementById("playerScore").innerHTML
 
 const startGame = () => {
   resetGame();
