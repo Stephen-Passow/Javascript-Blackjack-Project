@@ -1,8 +1,9 @@
+//setting player and dealer hands to 0 and empty arrays
 let playerHandTotal = 0;
 let dealerHandTotal = 0;
 let dealerHand = [];
 let playerHand = [];
-
+//deck of 52 playing cards
 let deckArray = [
   { suit: "hearts", value: 2, face: 2, image: "css/images/2_of_hearts.png" },
   { suit: "hearts", value: 3, face: 3, image: "css/images/3_of_hearts.png" },
@@ -64,18 +65,9 @@ let deckArray = [
 const getRandomCard = function () {
   return deckArray[Math.floor(Math.random() * deckArray.length)]
 };
-// assigning
+// assigning cards to display on the screen
 let dealerCards = document.getElementsByClassName("dealerCards")[0];
 let playerCards = document.getElementsByClassName("playerCards")[0];
-
-
-// function cardImage () {
-// let card = getRandomCard();
-// let cardImg = document.createElement("img");
-// cardImg.setAttribute("src", card.image);
-// cardImg.className = "card";
-// playerCards.appendChild(cardImg);
-// }
 
 //---check player score---------------
 const checkPlayerHand = () => {
@@ -84,6 +76,7 @@ const checkPlayerHand = () => {
     total += playerHand[i].value;
   }
   playerHandTotal = total;
+  
   //send player score to populate screen
   document.getElementById("playerScore").innerHTML = total;
 };
@@ -131,7 +124,6 @@ const stand = () => {
     else if (dealerHandTotal > 17) {
       return endGame();
     }
-    console.log('dealerHandTotal', dealerHandTotal[i]);
   }
 };
 
@@ -177,7 +169,7 @@ function resetGame() {
 }
 //send player score to populate screen
 document.getElementById("playerScore").innerHTML
-
+//start game function and reset points/images when clicked
 const startGame = () => {
   resetGame();
   document.getElementById("notifications").innerHTML = ""
@@ -186,9 +178,9 @@ const startGame = () => {
   for (i = 0; i < playerHand.length; i++) {
     playerCards.removeChild(playerCards.lastChild)
   }
-for (i = 0; i < dealerHand.length; i++) {
-  dealerCards.removeChild(dealerCards.lastChild)
-}
+  for (i = 0; i < dealerHand.length; i++) {
+    dealerCards.removeChild(dealerCards.lastChild)
+  }
   dealerHand = [];
   playerHand = [];
   hitPlayer();
