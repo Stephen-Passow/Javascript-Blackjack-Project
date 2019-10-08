@@ -60,56 +60,10 @@ let deckArray = [
   { suit: "diamonds", value: 10, face: "K", image: "K_of_diamonds.png" },
   { suit: "diamonds", value: 11, face: "A", image: "A_of_diamonds.png" }
 ];
-
 //function to get a random card off the deck
 const getRandomCard = function() {
   return deckArray[Math.floor(Math.random() * deckArray.length)];
 };
-
-//---check player score---------------
-const checkPlayerHand = () => {
-  let total = 0;
-  for (let i = 0; i < playerHand.length; i++) {
-    total += playerHand[i].value;
-  }
-
-  playerHandTotal = total;
-  console.log("playerHandTotal", total);
-
-  if (playerHandTotal > 21) {
-    alert("You Busted!");
-  }
-};
-
-//---check dealer score -----------------
-const checkDealerHand = () => {
-  let total = 0;
-  for (let i = 0; i < dealerHand.length; i++) {
-    console.log(dealerHand[i]);
-    total += dealerHand[i].value;
-  }
-  dealerHandTotal = total;
-  console.log("dealerHandTotal", total);
-  if (dealerHandTotal > 21) {
-    alert("Dealer busted you win!");
-  }
-};
-
-//hit the player with 1 card
-const hitPlayer = () => {
-  const hit = getRandomCard();
-  playerHand.push(hit);
-  console.log("playerHand", playerHand);
-  checkPlayerHand();
-};
-
-const stand = () => {
-  if (dealerHandTotal < 17);
-  dealerHand.push(hit);
-  checkDealerHand();
-  //else;
-}
-
 const startGame = () => {
   dealerHandTotal = 0;
   playerHandTotal = 0;
@@ -126,6 +80,55 @@ const startGame = () => {
   checkPlayerHand();
   checkDealerHand();
 };
+
+
+//---check player score---------------
+const checkPlayerHand = () => {
+  let total = 0;
+  for (let i = 0; i < playerHand.length; i++) {
+    total += playerHand[i].value;
+  }
+  playerHandTotal = total;
+  console.log("playerHandTotal", total);
+  if (playerHandTotal > 21) {
+    alert("You Busted!");
+  }
+};
+
+//---check dealer score -----------------
+const checkDealerHand = () => {
+  let total = 0;
+  for (let i = 0; i < dealerHand.length; i++) {
+    total += dealerHand[i].value;
+  }
+  dealerHandTotal = total;
+  console.log("dealerHandTotal", total);
+  if (dealerHandTotal > 21) {
+    alert("Dealer busted you win!");
+  }
+};
+
+//hit the player with 1 card
+const hitPlayer = () => {
+  const hit = getRandomCard();
+  playerHand.push(hit);
+  console.log("playerHand", playerHand);
+  checkPlayerHand();
+};
+//hit the dealer with 1 card
+const hitDealer = () => {
+  const hit = getRandomCard();
+  dealerHand.push(hit);
+  console.log("dealerHand", dealerHand);
+  checkDealerHand();
+};
+//stand function that will let dealer play then decide winner
+const stand = () => {
+  if (dealerHandTotal < 17);
+  dealerHand.push(hitDealer);
+  checkDealerHand();
+}
+
 
 document.getElementById("start").addEventListener("click", startGame);
 document.getElementById("hit").addEventListener("click", hitPlayer);
