@@ -99,5 +99,12 @@ flex: 1;
 #playerScore {
   height: 50px;
   width: 50px;
-  border: black solid 2px;
+}
+#notifications {
+  height: 100px;
+  width: 250px;
+  margin: 150px 20px 20px 0;
+  font: 30px bold;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-style: oblique;
 }
