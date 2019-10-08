@@ -116,4 +116,5 @@ flex: 1;
 .card {
   height: 100px;
   margin: 0 20px;
+  width: 100px;
 }
