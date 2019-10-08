@@ -3,6 +3,7 @@ let playerHandTotal = 0;
 let dealerHandTotal = 0;
 let dealerHand = [];
 let playerHand = [];
+
 //deck of 52 playing cards
 let deckArray = [
   { suit: "hearts", value: 2, face: 2, image: "css/images/2_of_hearts.png" },
@@ -99,8 +100,9 @@ const hitPlayer = () => {
   playerCards.appendChild(cardImg);
   playerHand.push(card);
   checkPlayerHand();
-  if (playerHandTotal > 21)
+  if (playerHandTotal > 21) {
     endGame();
+  }
 };
 //hit the dealer with 1 card
 const hitDealer = () => {
@@ -109,52 +111,48 @@ const hitDealer = () => {
   cardImg.setAttribute("src", card.image);
   cardImg.className = "card";
   dealerCards.appendChild(cardImg);
-  const hit = getRandomCard();
-  dealerHand.push(hit);
+  dealerHand.push(card);
   checkDealerHand();
-
 };
+
+const dealerAI = () => {
+  const hitAgain = () => {
+    hitDealer();
+    if(dealerHandTotal <17) {
+      hitAgain()
+    }
+  }
+  hitAgain()
+  endGame();
+}
+
 //stand function that will let dealer play then decide winner
 const stand = () => {
-  for (i = 0; i < dealerHand.length; i++) {
-    if (dealerHandTotal <= 17) {
-      hitDealer();
-    }
-    else if (dealerHandTotal > 17) {
-      return endGame();
-    }
-    console.log('dealerHandTotal', dealerHandTotal[i]);
-  }
-};
-
+  dealerAI();
+}
 //function to end the game and send a message based on win condition of player or dealer
 function endGame() {
   if (playerHandTotal === 21) {
     document.getElementById("notifications").innerHTML = "Blackjack! You win! Click New Game to play again";
-    resetGame();
   }
   if (playerHandTotal > 21) {
     document.getElementById("notifications").innerHTML = "You went over 21! The dealer wins Click New Game to play again";
-    resetGame();
   }
   if (dealerHandTotal === 21) {
     document.getElementById("notifications").innerHTML = "You lost. Dealer got blackjack Click New Game to play again";
-    resetGame();
   }
   if (dealerHandTotal > 21) {
     document.getElementById("notifications").innerHTML = "Dealer went over 21! You win! Click New Game to play again";
-    resetGame();
   }
   if (dealerHandTotal >= 17 && playerHandTotal > dealerHandTotal && playerHandTotal < 21) {
     document.getElementById("notifications").innerHTML = "You win! You beat the dealer. Click New Game to play again";
-    resetGame();
   }
   if (dealerHandTotal >= 17 && playerHandTotal < dealerHandTotal && dealerHandTotal < 21) {
     document.getElementById("notifications").innerHTML = "You lost. Dealer had the higher score. Click New Game to play again";
-    resetGame();
   }
-  if (dealerHandTotal >= 17 && playerHandTotal === dealerHandTotal && dealerHandTotal < 21)
+  if (dealerHandTotal >= 17 && playerHandTotal === dealerHandTotal && dealerHandTotal < 21) {
     document.getElementById("notifications").innerHTML = "You tied! Click New Game to play again";
+  }
   resetGame();
 }
 //function to reset the board
@@ -178,9 +176,9 @@ const startGame = () => {
   for (i = 0; i < playerHand.length; i++) {
     playerCards.removeChild(playerCards.lastChild)
   }
-for (i = 0; i < dealerHand.length; i++) {
-  dealerCards.removeChild(dealerCards.lastChild)
-}
+  for (i = 0; i < dealerHand.length; i++) {
+    dealerCards.removeChild(dealerCards.lastChild)
+  }
   dealerHand = [];
   playerHand = [];
   hitPlayer();
