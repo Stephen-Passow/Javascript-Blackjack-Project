@@ -76,7 +76,6 @@ const checkPlayerHand = () => {
     total += playerHand[i].value;
   }
   playerHandTotal = total;
-  
   //send player score to populate screen
   document.getElementById("playerScore").innerHTML = total;
 };
@@ -124,6 +123,7 @@ const stand = () => {
     else if (dealerHandTotal > 17) {
       return endGame();
     }
+    console.log('dealerHandTotal', dealerHandTotal[i]);
   }
 };
 
@@ -178,9 +178,9 @@ const startGame = () => {
   for (i = 0; i < playerHand.length; i++) {
     playerCards.removeChild(playerCards.lastChild)
   }
-  for (i = 0; i < dealerHand.length; i++) {
-    dealerCards.removeChild(dealerCards.lastChild)
-  }
+for (i = 0; i < dealerHand.length; i++) {
+  dealerCards.removeChild(dealerCards.lastChild)
+}
   dealerHand = [];
   playerHand = [];
   hitPlayer();

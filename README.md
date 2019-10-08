@@ -14,3 +14,8 @@ for the dealer, if the starting hand is 17 or more, it must stand. If the total 
                         ------------Good Luck!----------
 
 ![Wire Frame](css/wireframe.jpg)
+
+
+
+
+project board: https://git.generalassemb.ly/Stephen-91/blackjack-project/projects/1
