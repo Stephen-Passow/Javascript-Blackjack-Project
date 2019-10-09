@@ -32,10 +32,12 @@
   align-content: flex-start;
   display: flex;
   background:rgba(200, 200, 200, .4);
-  color:greenyellow;
+  color:rgb(121, 4, 4);
   border-radius:35px;
   padding: 30px;
-  margin: 20px; 
+  margin: 20px;
+  font-weight: bold;
+  
 }
 .btn:focus {outline:0;}
 .board:focus {outline:0}
@@ -114,7 +116,7 @@ flex: 1;
   font-style: oblique;
 }
 .card {
-  height: 100px;
+  height: 130px;
   margin: 0 20px;
   width: 100px;
 }

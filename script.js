@@ -136,10 +136,10 @@ function endGame() {
     document.getElementById("notifications").innerHTML = "Blackjack! You win! Click New Game to play again";
   }
   if (playerHandTotal > 21) {
-    document.getElementById("notifications").innerHTML = "You went over 21! The dealer wins Click New Game to play again";
+    document.getElementById("notifications").innerHTML = "You went over 21! The dealer wins. Click New Game to play again";
   }
   if (dealerHandTotal === 21) {
-    document.getElementById("notifications").innerHTML = "You lost. Dealer got blackjack Click New Game to play again";
+    document.getElementById("notifications").innerHTML = "You lost. Dealer got blackjack. Click New Game to play again";
   }
   if (dealerHandTotal > 21) {
     document.getElementById("notifications").innerHTML = "Dealer went over 21! You win! Click New Game to play again";
@@ -191,3 +191,15 @@ const startGame = () => {
 document.getElementById("start").addEventListener("click", startGame);
 document.getElementById("hit").addEventListener("click", hitPlayer);
 document.getElementById("stay").addEventListener("click", stand);
+
+// function hasAce () {
+
+// }
+
+// if (playerHandTotal > 21 && hasAce) {
+// return(playerHandTotal - 10)
+// }
+
+// if (dealerHandTotal > 21 && hasAce) {
+//   return(playerHandTotal - 10)
+// }
