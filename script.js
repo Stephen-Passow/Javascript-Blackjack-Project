@@ -118,7 +118,7 @@ const hitDealer = () => {
 const dealerAI = () => {
   const hitAgain = () => {
     hitDealer();
-    if(dealerHandTotal <17) {
+    if (dealerHandTotal < 17) {
       hitAgain()
     }
   }

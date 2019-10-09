@@ -11,7 +11,7 @@ The player goes and must decide whether to "stand" (not ask for another card) or
 
 for the dealer, if the starting hand is 17 or more, it must stand. If the total is 16 or under, they must take a card. The dealer must continue to take cards until the total is 17 or more, at which point the dealer must stand. The dealer's decisions, then, are automatic on all plays, whereas the player always has the option of taking one or more cards.
 
-                        ------------Good Luck!----------
+                                    ------------Good Luck!----------
 
 ![Wire Frame](css/wireframe.jpg)
 
@@ -19,3 +19,4 @@ for the dealer, if the starting hand is 17 or more, it must stand. If the total 
 
 
 project board: https://git.generalassemb.ly/Stephen-91/blackjack-project/projects/1
+netlify address: https://awesome-kirch-4a5b66.netlify.com/
