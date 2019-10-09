@@ -197,9 +197,9 @@ document.getElementById("stay").addEventListener("click", stand);
 // }
 
 // if (playerHandTotal > 21 && hasAce) {
-// return(playerHandTotal - 10)
+// return (playerHandTotal - 10)
 // }
 
 // if (dealerHandTotal > 21 && hasAce) {
-//   return(playerHandTotal - 10)
+//   return (playerHandTotal - 10)
 // }

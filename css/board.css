@@ -21,7 +21,7 @@
   border: solid 1px #ddd;
   background: #039a37;
   border: solid 10px burlywood;
-  height: 620px;
+  height: 600px;
   border-radius: 20px;
   display: flex;
   margin-left: 20px;
@@ -45,7 +45,6 @@
   background: white; 
 }
 h3 {
-  padding: 3px;
   background: black;
   color:white;
   font-size: 26px;
