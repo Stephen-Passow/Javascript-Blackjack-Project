@@ -191,15 +191,3 @@ const startGame = () => {
 document.getElementById("start").addEventListener("click", startGame);
 document.getElementById("hit").addEventListener("click", hitPlayer);
 document.getElementById("stay").addEventListener("click", stand);
-
-// function hasAce () {
-
-// }
-
-// if (playerHandTotal > 21 && hasAce) {
-// return (playerHandTotal - 10)
-// }
-
-// if (dealerHandTotal > 21 && hasAce) {
-//   return (playerHandTotal - 10)
-// }
